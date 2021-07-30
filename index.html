@@ -3,105 +3,21 @@
 
     <title>Login</title>
 
-
-<style>
-
-    body{
-        background-color: #63a8cc;
-    }
-
-    .ducky_head{
-
-        position: absolute;
-        width: 30%;
-        right: 0;
-        left: 0;
-        margin-right: auto;
-        margin-left: auto;
-
-        }
-
-    .login-form{
-        position: relative;
-        width: 30%;
-        right: 0;
-        left: 0;
-        top: 0;
-        margin-top: 25%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .forminputs{
-        position: absolute;
-        width: 80%;
-        right: 0;
-        left: 0;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: Transparent;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-color: #FFFFFF;
-        margin-top: 5%;
-        user-select: none;
-        border-bottom-width: medium;
-    }
-
-    .formlabels{
-        position: absolute;
-        margin-top: -5%;
-        color: #FFFFFF;
-    }
-
-    input[type=text]{
-        color: white;
-        font-size: large;
-    }
-
-    input[type=datetime-local]{
-        color: white;
-        font-size: large;
-    }
-
-    input[placeholder=subject]{
-        color: white;
-        font-size: large;
-    }
-
-    .btn-default{
-        position: absolute;
-        width: 50%;
-        height: 50%;
-        right: 0;
-        left: 0;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: #63a8cc;
-        border-color: #FFFFFF;
-        border-radius: 30px;
-        color: white;
-        margin-top: 10%;
-        border-width: thick;
-        font-weight: lighter;
-        font-size: large;
-    }
-
-
-</style>
+    <link rel="stylesheet" href="stylesheet.css">
 
     <img class="ducky_head" src="rubberducky.jpg">
     <h1>Home Page!</h1>
+
 </head>
+
 <body>
 
-      <form class="login-form" action="" method="post">
-          <input class="forminputs" type="text" placeholder="Subject:" id="subject" name="subject" value="{{ request.form.subject }}"> <br><br><br>
-          <input class="forminputs" type="text" placeholder="Description:" id="description" name="description" value="{{ request.form.description }}"><br><br><br>
-          <input class="forminputs" type="datetime-local" placeholder="Date" id="date-time" name="date-time" value="Subject {{ request.form.date-time }}"><br><br><br>
-          <input class="btn btn-default" type="submit" value="Schedule it!">
-      </form>
+    <form class="login-form" action="" method="post">
+       <input class="forminputs" type="text" placeholder="Subject:" id="subject" name="subject" value="{{ request.form.subject }}"> <br><br><br>
+       <input class="forminputs" type="text" placeholder="Description:" id="description" name="description" value="{{ request.form.description }}"><br><br><br>
+       <input class="forminputs" type="datetime-local" placeholder="Date" id="date-time" name="date-time" value="Subject {{ request.form.date-time }}"><br><br><br>
+       <input class="btn btn-default" type="submit" value="Schedule it!">
+    </form>
 
 
 </body>
