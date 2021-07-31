@@ -1,113 +1,132 @@
-body{
-        background-color: #63a8cc;
-    }
-
-h1{
-    color:white;
-    position: absolute;
-    width: 15%;
-    right: 0;
-    left: 0;
-    top: -20px;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-
-    .ducky_head{
-
-        position: absolute;
-        width: 15%;
-        right: 0;
-        left: 0;
-        top:58px;
-        margin-right: auto;
-        margin-left: auto;
+        body{
+            background-color: #63a8cc;
+            font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+            color: white;
 
         }
+        #outer_container {
+            background-color: #63a8cc;
+            width: 900px;
+            margin:auto;
+        }
+        #banner {
+            background-color: #63a8cc;
+        }
+        #content {
+            background-color:#63a8cc;
+        }
+        .column{
+            width: 30%;
+            height: 250px;
+            padding: 1%;
+            float: left;
+            position: relative;
 
-    textarea{
-        position: absolute;
-        width: 30%;
-        right: 0;
-        left: 0;
-        top: 0;
-        margin-top: 20%;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: Transparent;
-        border-style: none;
-        color: white;
-        font-size: x-large;
-        font-style: initial;
-        text-align: center;
+        }
+        #banner:after {
+            content: "";
+            display: table;
+            clear: left;
+        }
+        #logo{
+            display: block;
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            size: auto;
+        }
+        #text-left{
+            font-size: xxx-large;
+            display: block;
+            position: absolute;
+            right: -20px;
+            top: 125px;
+            margin: auto;
+            width: 125%;
+        }
+        .main{
+            margin: auto;
+            width: 65%;
+
+        }
+        #main-body {
+            position: relative;
+            resize: none;
+            background-color: Transparent;
+            border-style: none;
+            color: white;
+            font-size: x-large;
+            text-align: center;
+            outline: none;
+            width: 80%;
+            height: 250px;
+            margin: auto;
+            size: auto;
+            top: 50px
+        }
+        .schedule-form{
+            position: relative;
+            width: 30%;
+            right: 0;
+            left: 0;
+            top: -300px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .forminputs{
+            position: absolute;
+            width: 80%;
+            right: 0;
+            left: 0;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: Transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-color: #FFFFFF;
+            margin-top: 85%;
+            user-select: none;
+            border-bottom-width: medium;
     }
 
-    .schedule-form{
-        position: relative;
-        width: 30%;
-        right: 0;
-        left: 0;
-        top: 0;
-        margin-top: 10%;
-        margin-right: auto;
-        margin-left: auto;
-    }
+        input[type=text]{
+            color: white;
+            font-size: large;
+            width: 100%;
+        }
 
-    .forminputs{
-        position: absolute;
-        width: 80%;
-        right: 0;
-        left: 0;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: Transparent;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-color: #FFFFFF;
-        margin-top: 85%;
-        user-select: none;
-        border-bottom-width: medium;
-    }
+        input[type=datetime-local]{
+            color: white;
+            font-size: large;
+        }
 
-    input[type=text]{
-        color: white;
-        font-size: large;
-        width: 100%;
-    }
+        input[type=tel]{
+            color: white;
+            font-size: large;
+        }
 
-    input[type=datetime-local]{
-        color: white;
-        font-size: large;
-    }
+        input[placeholder=subject]{
+            color: white;
+            font-size: large;
+        }
 
-    input[type=tel]{
-        color: white;
-        font-size: large;
-    }
-
-    input[placeholder=subject]{
-        color: white;
-        font-size: large;
-    }
-
-    .btn-default{
-        position: absolute;
-        size: 40px;
-        width: 50%;
-        height: 40%;
-        right: 0;
-        left: 0;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: #63a8cc;
-        border-color: white;
-        border-radius: 40px;
-        color: white;
-        margin-top: 87%;
-        border-width: thick;
-        font-weight: lighter;
-        font-size: larger;
-        border-style: solid;
-    }
+        .btn-default{
+            position: absolute;
+            size: 40px;
+            width: 50%;
+            height: 40%;
+            right: 0;
+            left: 0;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: #63a8cc;
+            border-color: white;
+            border-radius: 40px;
+            color: white;
+            margin-top: 87%;
+            border-width: thick;
+            font-weight: lighter;
+            font-size: larger;
+            border-style: solid;
+        }
