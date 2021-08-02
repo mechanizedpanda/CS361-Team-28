@@ -15,7 +15,7 @@ def form():
     sms_time = request.form.get("time", default_name)
     sms_num = request.form.get("phone", default_name)
     print(sms_sub, sms_desc, sms_date, sms_time, sms_num)
-    return render_template('success.html')
+    return render_template('success.html', sub = sms_sub, desc = sms_desc, date = sms_date, time = sms_time, num = sms_num)
 
 @app.errorhandler(404)
 def not_found(e):
