@@ -2,15 +2,148 @@
 <html lang="en">
 <head>
     <title>Schedule a reminder!</title>
-    <link rel="stylesheet" href="stylesheet2.css">
+    <link rel="stylesheet" href="stylesheet.css">
+<style>
+    body{
+    background-color: #63a8cc;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    color: white;
 
+}
+#outer_container {
+    background-color: #63a8cc;
+    width: 900px;
+    margin:auto;
+}
+#banner {
+    background-color: #63a8cc;
+}
+#content {
+    background-color:#63a8cc;
+}
+.column{
+    width: 30%;
+    height: 250px;
+    padding: 1%;
+    float: left;
+    position: relative;
+
+}
+#banner:after {
+    content: "";
+    display: table;
+    clear: left;
+}
+#logo{
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    size: auto;
+}
+#text-left{
+    font-size: xxx-large;
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 125px;
+    margin: auto;
+    width: 125%;
+}
+.main{
+    margin: auto;
+    width: 65%;
+
+}
+#main-body {
+    position: relative;
+    resize: none;
+    background-color: Transparent;
+    border-style: none;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    outline: none;
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    size: auto;
+    top: 50px
+}
+.schedule-form{
+    position: relative;
+    width: 30%;
+    right: 0;
+    left: 0;
+    top: -300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.forminputs{
+    position: absolute;
+    width: 80%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: Transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #FFFFFF;
+    margin-top: 85%;
+    user-select: none;
+    border-bottom-width: medium;
+}
+
+input[type=text]{
+    color: white;
+    font-size: large;
+    width: 100%;
+}
+
+input[type=datetime-local]{
+    color: white;
+    font-size: large;
+}
+
+input[type=tel]{
+    color: white;
+    font-size: large;
+}
+
+input[placeholder=subject]{
+    color: white;
+    font-size: large;
+}
+
+.btn-default{
+    position: absolute;
+    size: 40px;
+    width: 50%;
+    height: 40%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #63a8cc;
+    border-color: white;
+    border-radius: 40px;
+    color: white;
+    margin-top: 87%;
+    border-width: thick;
+    font-weight: lighter;
+    font-size: larger;
+    border-style: solid;
+}
+</style>
 </head>
 
 <body>
 <div id="outer_container">
     <div id="banner">
         <div  class="column"><text id="text-left">be proDUCKtive</text></div>
-        <div class="column"><img id="logo" src="rubberducky.png"/> </div>
+        <div class="column"><img id="logo" src="rubberducky.jpg"/> </div>
     </div>
     <div id="content">
         <div class="main"><textarea readonly id="main-body" cols="1" rows="5" style="width:800px;height:320px;">Having trouble remembering the things you need to take care of frequently? Fear no more, we're here to make you more proDUCKtive! This is the easiest solution to your problem, just enter what it is you need to do, a brief description, the date and time you would like the reminder to be sent, and what number to send it to! The app takes care of the rest!
@@ -19,10 +152,11 @@ NOW GET QUACK TO WORK! ;)</textarea></div>
     <div id="footer">
         <div class="form">
             <form class="schedule-form" action="" method="post">
-            <input class="forminputs" type="text" placeholder="Subject:" name="subject" value="{{ request.form.subject }}"> <br><br><br>
-            <input class="forminputs" type="text" placeholder="Description:" name="description" value="{{ request.form.description }}"><br><br><br>
-            <input class="forminputs" type="datetime-local" placeholder="Date" name="date-time" value="{{ request.form.date-time }}"><br><br><br>
-            <input class="forminputs" type="tel" placeholder="Phone Number:" name="phone" value="{{ request.form.phone }}"><br><br><br>
+            <input class="forminputs" type="text" placeholder="Subject:" name="subject" > <br><br><br>
+            <input class="forminputs" type="text" placeholder="Description:" name="description" ><br><br><br>
+            <input class="forminputs" type="date" placeholder="Date" name="date" ><br><br><br>
+            <input class="forminputs" type="time" placeholder="Time" name="time" ><br><br><br>
+            <input class="forminputs" type="tel" placeholder="Phone Number:" name="phone" ><br><br><br>
             <input class="btn btn-default" type="submit" value="Schedule it!">
             </form>
         </div>
